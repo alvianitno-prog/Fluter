@@ -1,0 +1,12 @@
+{
+  "name": "bot jashare iwaw",
+  "version": "1.0.0",
+  "description": "Bot Jashare Telegram with Node.js",
+  "main": "iwaw.js",
+  "scripts": {
+    "start": "node iwaw.js"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
