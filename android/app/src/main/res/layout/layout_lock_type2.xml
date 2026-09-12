@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FF000000"
+    android:gravity="center">
+    
+    <!-- Overlay fullscreen -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000000"
+        android:alpha="1.0"/>
+    
+    <!-- Konten terminal di tengah -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#000000">
+        
+        <!-- Header Terminal -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="┌────────────────────────────────────────┐"
+            android:textColor="#00FF00"
+            android:fontFamily="monospace"
+            android:textSize="12sp"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="│  SECURE TERMINAL v2.0                    │"
+            android:textColor="#00FF00"
+            android:fontFamily="monospace"
+            android:textSize="12sp"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="│  [SUNOV] Enforcement Mode ACTIVE      │"
+            android:textColor="#00FF00"
+            android:fontFamily="monospace"
+            android:textSize="12sp"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="└────────────────────────────────────────┘"
+            android:textColor="#00FF00"
+            android:fontFamily="monospace"
+            android:textSize="12sp"
+            android:layout_marginBottom="20dp"/>
+        
+        <!-- Chat Logs Area -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[>] Connection: ESTABLISHED"
+            android:textColor="#00FF00"
+            android:fontFamily="monospace"
+            android:textSize="11sp"
+            android:layout_marginBottom="5dp"/>
+        
+        <!-- FIX: Tambahin ID di sini -->
+        <ScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="#0A0A0A"
+            android:padding="10dp">
+            
+            <TextView
+                android:id="@+id/tv_chat_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#00FF00"
+                android:fontFamily="monospace"
+                android:textSize="11sp"
+                android:text="[system] Terminal ready.\n[system] Waiting for commands..."/>
+        </ScrollView>
+        
+        <!-- Input Area -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:background="#0A0A0A"
+            android:padding="10dp">
+            
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=">_ "
+                android:textColor="#00FF00"
+                android:fontFamily="monospace"
+                android:textSize="14sp"
+                android:textStyle="bold"/>
+            
+            <EditText
+                android:id="@+id/et_chat_input"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="type '/unlock [PIN]' to exit..."
+                android:textColor="#00FF00"
+                android:textColorHint="#336633"
+                android:background="@null"
+                android:fontFamily="monospace"
+                android:textSize="14sp"
+                android:inputType="textVisiblePassword"/>
+        </LinearLayout>
+        
+        <!-- Tombol -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp">
+            
+            <Button
+                android:id="@+id/btn_send_chat"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="SEND"
+                android:textColor="#000000"
+                android:backgroundTint="#00FF00"
+                android:textStyle="bold"
+                android:layout_marginRight="5dp"/>
+            
+            <Button
+                android:id="@+id/btn_unlock_chat"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:text="UNLOCK"
+                android:textColor="#00FF00"
+                android:backgroundTint="#333333"
+                android:textStyle="bold"
+                android:layout_marginLeft="5dp"/>
+        </LinearLayout>
+        
+        <!-- Status Bar -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="[CRPT.ZDX] | ENFORCEMENT MODE | v2.0"
+            android:textColor="#336633"
+            android:fontFamily="monospace"
+            android:textSize="9sp"
+            android:gravity="center"
+            android:layout_marginTop="15dp"/>
+    </LinearLayout>
+</LinearLayout>
