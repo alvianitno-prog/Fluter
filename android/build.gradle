@@ -8,7 +8,7 @@ buildscript {
 
     dependencies {
         // Upgrade AGP ke versi 8.6.0 agar sinkron dengan settings.gradle
-        classpath 'com.android.tools.build:gradle:8.6.0'
+        classpath 'com.android.tools.build:gradle:8.11.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
