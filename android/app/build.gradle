@@ -1,0 +1,85 @@
+plugins {
+    id "com.android.application"
+    id "kotlin-android"
+    id "dev.flutter.flutter-gradle-plugin"
+}
+
+android {
+    namespace "com.nullx.pp"
+    compileSdk 36
+    
+    // Versi NDK sesuai permintaan plugin lo
+    ndkVersion "28.2.13676358"
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+        coreLibraryDesugaringEnabled true
+    }
+
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+
+    defaultConfig {
+        applicationId "com.nullx.pp"
+        minSdk 23
+        targetSdk 35
+        versionCode flutter.versionCode
+        versionName flutter.versionName
+        multiDexEnabled true
+    }
+
+    signingConfigs {
+        debug {
+            // Fix: Cek apakah file keystore ada sebelum mencoba membacanya
+            def keystoreFile = file('debug.keystore')
+            if (keystoreFile.exists()) {
+                storeFile keystoreFile
+                storePassword 'android'
+                keyAlias 'androiddebugkey'
+                keyPassword 'android'
+            }
+        }
+    }
+
+    buildTypes {
+    release {
+        if (signingConfigs.debug.storeFile != null) {
+            signingConfig signingConfigs.debug
+        }
+
+        minifyEnabled true
+        shrinkResources true
+        proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+    }
+
+    debug {
+        if (signingConfigs.debug.storeFile != null) {
+            signingConfig signingConfigs.debug
+        }
+    }
+}
+    
+    buildFeatures {
+        buildConfig true
+    }
+}
+
+dependencies {
+    implementation('io.socket:socket.io-client:2.1.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+    
+    implementation "androidx.core:core-ktx:1.12.0"
+    implementation "androidx.appcompat:appcompat:1.6.1"
+    implementation "androidx.multidex:multidex:2.0.1"
+
+    // Library untuk desugaring
+    coreLibraryDesugaring "com.android.tools:desugar_jdk_libs:2.0.4"
+}
+
+flutter {
+    source "../.."
+}
