@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000">
+    
+    <VideoView
+        android:id="@+id/vv_lock_stream"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:background="#AA000000">
+        
+        <EditText
+            android:id="@+id/et_video_pass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="Enter PIN to unlock"
+            android:textColor="#00FF00"
+            android:textColorHint="#336633"
+            android:inputType="numberPassword"
+            android:background="#FF222222"
+            android:padding="10dp"
+            android:textSize="16sp"/>
+        
+        <Button
+            android:id="@+id/btn_video_unlock"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:text="UNLOCK"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#FF0000"
+            android:textStyle="bold"/>
+        
+        <ImageView
+            android:id="@+id/btn_close_video"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+    
+</FrameLayout>
