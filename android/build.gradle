@@ -1,6 +1,6 @@
 buildscript {
     // Sesuaikan versi Kotlin dengan yang dideklarasikan di settings.gradle
-    ext.kotlin_version = '2.1.0' 
+    ext.kotlin_version = '2.2.20' 
     repositories {
         google()
         mavenCentral()
